@@ -9,7 +9,7 @@ export class RandomNumber {
     }
     randomMultiple(min: number, max: number, options?: Partial<randomMultipleOptions>): Array<number> {
         const { select, unique }: randomMultipleOptions = initConfig(options, { unique: true, select: 1 });
-        if (max < select) {
+        if (max < select && unique) {
             throw new ErrorHandler(RandomNumberErrors.SELECT_VALUE_MUST_BE_LESS_THAN_MAX_VALUE, "SELECT_VALUE_MUST_BE_LESS_THAN_MAX_VALUE");
         }
         const numbers = generateRandomNumbers(select, max, unique)
