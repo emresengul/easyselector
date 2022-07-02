@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.RandomNumber = void 0;
 var errors_1 = require("./errors");
 var utils_1 = require("../../utils");
+var errorHandler_1 = require("../../errorHandler");
 var RandomNumber = /** @class */ (function () {
     function RandomNumber() {
     }
@@ -12,7 +13,7 @@ var RandomNumber = /** @class */ (function () {
     RandomNumber.prototype.randomMultiple = function (min, max, options) {
         var _a = (0, utils_1.initConfig)(options, { unique: true, select: 1 }), select = _a.select, unique = _a.unique;
         if (max < select) {
-            throw { errorKey: "SELECT_VALUE_MUST_BE_LESS_THAN_MAX_VALUE", message: errors_1.RandomNumberErrors.SELECT_VALUE_MUST_BE_LESS_THAN_MAX_VALUE };
+            throw new errorHandler_1.ErrorHandler(errors_1.RandomNumberErrors.SELECT_VALUE_MUST_BE_LESS_THAN_MAX_VALUE, "SELECT_VALUE_MUST_BE_LESS_THAN_MAX_VALUE");
         }
         var numbers = (0, utils_1.generateRandomNumbers)(select, max, unique);
         return numbers;

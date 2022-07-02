@@ -5,5 +5,4 @@ export interface randomOptions {
 export interface randomMultipleOptions {
     unique: boolean;
     select: number;
-    array: Array<any>;
 }

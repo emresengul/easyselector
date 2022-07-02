@@ -1,6 +1,7 @@
 import { RandomNumberErrors } from './errors';
 import { generateRandomNumbers, initConfig } from "../../utils";
 import { randomMultipleOptions } from "./utils";
+import { ErrorHandler } from '../../errorHandler';
 
 export class RandomNumber {
     random(min: number, max: number): number {
@@ -9,7 +10,7 @@ export class RandomNumber {
     randomMultiple(min: number, max: number, options?: Partial<randomMultipleOptions>): Array<number> {
         const { select, unique }: randomMultipleOptions = initConfig(options, { unique: true, select: 1 });
         if (max < select) {
-            throw { errorKey: "SELECT_VALUE_MUST_BE_LESS_THAN_MAX_VALUE", message: RandomNumberErrors.SELECT_VALUE_MUST_BE_LESS_THAN_MAX_VALUE }
+            throw new ErrorHandler(RandomNumberErrors.SELECT_VALUE_MUST_BE_LESS_THAN_MAX_VALUE, "SELECT_VALUE_MUST_BE_LESS_THAN_MAX_VALUE");
         }
         const numbers = generateRandomNumbers(select, max, unique)
         return numbers
