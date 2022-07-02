@@ -1,0 +1,33 @@
+{
+  "name": "randomselector",
+  "version": "1.0.0",
+  "description": "Javascript easy to use random selectors",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start": "nodemon index.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "random",
+    "random selector",
+    "random value",
+    "random element"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emresengul/randomselector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emresengul/randomselector/issues"
+  },
+  "homepage": "https://github.com/emresengul/randomselector#readme",
+  "author": "emresengul",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.16",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2"
+  }
+}
