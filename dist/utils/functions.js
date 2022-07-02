@@ -16,11 +16,11 @@ var initConfig = function (argConfig, defaultConfig) {
     return __assign(__assign({}, defaultConfig), argConfig);
 };
 exports.initConfig = initConfig;
-var generateRandomNumbers = function (total, limit, unique) {
-    if (unique === void 0) { unique = true; }
+var generateRandomNumbers = function (_a) {
+    var min = _a.min, max = _a.max, total = _a.total, unique = _a.unique;
     var arr = [];
     while (arr.length < total) {
-        var r = Math.floor(Math.random() * limit) + 1;
+        var r = Math.floor((min + Math.random() * (max - min)) + 1);
         if (unique && arr.indexOf(r) === -1)
             arr.push(r);
         else if (!unique)

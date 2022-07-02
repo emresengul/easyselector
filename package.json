@@ -1,6 +1,6 @@
 {
   "name": "easyselector",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Javascript easy to use random selectors",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

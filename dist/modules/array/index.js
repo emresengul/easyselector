@@ -13,10 +13,10 @@ var RandomArray = /** @class */ (function () {
     };
     RandomArray.prototype.randomMultiple = function (array, options) {
         var _a = (0, functions_1.initConfig)(options, { unique: true, select: 1 }), select = _a.select, unique = _a.unique;
-        if (array.length < select) {
+        if (array.length < select && unique) {
             throw new errorHandler_1.ErrorHandler(errors_1.RandomArrayErrors.ARRAY_LENGTH_LESS_THAN_SELECT, "ARRAY_LENGTH_LESS_THAN_SELECT");
         }
-        var numbers = (0, functions_1.generateRandomNumbers)(select, array.length, unique);
+        var numbers = (0, functions_1.generateRandomNumbers)({ min: 0, max: array.length, total: select, unique: unique });
         return numbers.map(function (number) { return array[number - 1]; });
     };
     return RandomArray;

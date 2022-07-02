@@ -12,10 +12,13 @@ var RandomNumber = /** @class */ (function () {
     };
     RandomNumber.prototype.randomMultiple = function (min, max, options) {
         var _a = (0, utils_1.initConfig)(options, { unique: true, select: 1 }), select = _a.select, unique = _a.unique;
-        if (max < select) {
+        if (max < select && unique) {
             throw new errorHandler_1.ErrorHandler(errors_1.RandomNumberErrors.SELECT_VALUE_MUST_BE_LESS_THAN_MAX_VALUE, "SELECT_VALUE_MUST_BE_LESS_THAN_MAX_VALUE");
         }
-        var numbers = (0, utils_1.generateRandomNumbers)(select, max, unique);
+        else if (max - min < select && unique) {
+            throw new errorHandler_1.ErrorHandler(errors_1.RandomNumberErrors.SELECT_VALUE_MORE_THAN_ARRAY_LENGTH, "SELECT_VALUE_MORE_THAN_ARRAY_LENGTH");
+        }
+        var numbers = (0, utils_1.generateRandomNumbers)({ min: min, max: max, total: select, unique: unique });
         return numbers;
     };
     RandomNumber.prototype.randomGenerate = function (digitNumber) {
