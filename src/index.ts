@@ -1,4 +1,4 @@
-import { RandomSelector } from "./randomselector";
+import { EasySelector } from "./easySelector";
 
 
-export const randomSelector: RandomSelector = new RandomSelector();
+export const easySelector: EasySelector = new EasySelector();

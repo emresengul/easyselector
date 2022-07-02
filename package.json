@@ -1,5 +1,5 @@
 {
-  "name": "randomselector",
+  "name": "easyselector",
   "version": "1.0.0",
   "description": "Javascript easy to use random selectors",
   "main": "dist/index.js",
@@ -17,12 +17,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/emresengul/randomselector.git"
+    "url": "git+https://github.com/emresengul/easyselector.git"
   },
   "bugs": {
-    "url": "https://github.com/emresengul/randomselector/issues"
+    "url": "https://github.com/emresengul/easyselector/issues"
   },
-  "homepage": "https://github.com/emresengul/randomselector#readme",
+  "homepage": "https://github.com/emresengul/easyselector#readme",
   "author": "emresengul",
   "license": "ISC",
   "devDependencies": {
