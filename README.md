@@ -41,11 +41,11 @@ const randomArrayMultipleValue = easySelector.array.randomMultiple(dummyArray,{ 
 | rgba      | ```null``` | ```easySelector.color.rgba() ``` | ```"rgba(88,58,238,0.1)"``` |
 
 ## All Functions for Number Random Selector
-| Functions      | Args                                                          | Usage                                                                                 | Output         |
-| -------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------- | -------------- |
-| random         | ```min:number,max:number```                                   | ```easySelector.number.random(25000,36800) ```                                        | ```35516```    |
-| randomMultiple | ```min:number,max:number,{unique: boolean, select: number}``` | ```easySelector.number.randomMultiple(25000,36800,{ select:  5, unique:  true  }) ``` | ```35516```    |
-| randomGenerate | ```digitNumber:number```                                      | ```easySelector.number.randomGenerate(8) ```                                          | ```95898101``` |
+| Functions      | Args                                                          | Usage                                                                                 | Output                                      |
+| -------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------- |
+| random         | ```min:number,max:number```                                   | ```easySelector.number.random(25000,36800) ```                                        | ```35516```                                 |
+| randomMultiple | ```min:number,max:number,{unique: boolean, select: number}``` | ```easySelector.number.randomMultiple(25000,36800,{ select:  5, unique:  true  }) ``` | ```[ 29634, 33173, 29273, 31333, 35071 ]``` |
+| randomGenerate | ```digitNumber:number```                                      | ```easySelector.number.randomGenerate(8) ```                                          | ```95898101```                              |
 
 
 ## Use Cases
