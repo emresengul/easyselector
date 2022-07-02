@@ -13,7 +13,7 @@ export class RandomArray {
         if (array.length < select && unique) {
             throw new ErrorHandler(RandomArrayErrors.ARRAY_LENGTH_LESS_THAN_SELECT, "ARRAY_LENGTH_LESS_THAN_SELECT");
         }
-        const numbers = generateRandomNumbers(select, array.length, unique)
+        const numbers = generateRandomNumbers({ min: 0, max: array.length, total: select, unique });
         return numbers.map(number => array[number - 1]);
     }
 }

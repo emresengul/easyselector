@@ -12,7 +12,10 @@ export class RandomNumber {
         if (max < select && unique) {
             throw new ErrorHandler(RandomNumberErrors.SELECT_VALUE_MUST_BE_LESS_THAN_MAX_VALUE, "SELECT_VALUE_MUST_BE_LESS_THAN_MAX_VALUE");
         }
-        const numbers = generateRandomNumbers(select, max, unique)
+        else if (max - min < select && unique) {
+            throw new ErrorHandler(RandomNumberErrors.SELECT_VALUE_MORE_THAN_ARRAY_LENGTH, "SELECT_VALUE_MORE_THAN_ARRAY_LENGTH");
+        }
+        const numbers = generateRandomNumbers({ min, max, total: select, unique });
         return numbers
     }
     randomGenerate(digitNumber: number) {
