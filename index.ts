@@ -12,3 +12,11 @@ import { randomSelector } from './src/index';
 // console.log('rgbColor is=', rgbColor)
 // const rgbaColor = randomSelector.color.rgba();
 // console.log('rgbColor is=', rgbaColor)
+
+// const randomNumber = randomSelector.number.random(25000, 36800);
+// console.log('random number=', randomNumber)
+// const randomNumberMultiple = randomSelector.number.randomMultiple(1, 10, { select: 5, unique: true });
+// console.log('random number=', randomNumberMultiple)
+
+// const randomGenerate = randomSelector.number.randomGenerate(8);
+// console.log('random number=', randomGenerate)
